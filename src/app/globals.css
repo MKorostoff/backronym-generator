@@ -8,12 +8,23 @@ html, body {
   max-width: 480px;
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
 }
+
+h1 {
+  color: #dc0057;
+}
+
+h2 {
+  color: #00cadc;
+}
+
 .dropcap {
   font-size: 150px;
   font-weight: bold;
   line-height: 1;
   margin-right: -40px;
+  color: #dc0057;
 }
 
 .dropcap-large {
@@ -22,4 +33,58 @@ html, body {
 
 .word-chopped {
   font-size: 50px;
+}
+
+.submit .buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit button {
+  font-size: 30px;
+  padding: 10px;
+  color: teal;
+  cursor: pointer;
+}
+
+.or {
+  padding: 10px;
+}
+
+.leaderboard {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 5em;
+  padding: 5em 20px;
+}
+
+.helptext {
+  font-size: 10px;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(77, 77, 77);
+}
+
+.footer h2 {
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  font-size: 20px;
+}
+
+table td {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.vote-button {
+  width: 33%;
+  line-height: 20px;
 }
