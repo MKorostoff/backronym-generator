@@ -7,7 +7,7 @@ export default function Intro() {
       </p>
 
       <p className="intro-text">
-      This is a hobby project, to learn all the new Nextjs APIs premiered this week at <a href="https://vercel.com/ship" target="_blank">vercel ship</a>. It was thrown together by Matt Korostoff in about 3 hours. It's meanth to be the smallest possible app that would leverage <a href="https://vercel.com/docs/storage">vercel storage</a>, <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions">server actions</a>, <a href="https://nextjs.org/docs/getting-started/react-essentials#client-components">client/server components</a>, and <a href="https://nextjs.org/docs/app/api-reference/file-conventions/metadata">file based metadata</a>. It's not really meant to be <em>useful</em> just sort of a fun way to show off some new things you can do with Nextjs/Vercel.
+      This is a hobby project, to learn all the new Nextjs APIs premiered this week at <a href="https://vercel.com/ship" target="_blank">vercel ship</a>. It was thrown together by Matt Korostoff in about 3 hours. It's meant to be the smallest possible app that would leverage <a href="https://vercel.com/docs/storage">vercel storage</a>, <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions">server actions</a>, <a href="https://nextjs.org/docs/getting-started/react-essentials#client-components">client/server components</a>, and <a href="https://nextjs.org/docs/app/api-reference/file-conventions/metadata">file based metadata</a>. It's not really meant to be <em>useful</em> just sort of a fun way to show off some new things you can do with Nextjs/Vercel.
       </p>
 
       <p className="intro-text">
