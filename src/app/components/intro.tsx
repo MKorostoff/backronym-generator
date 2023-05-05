@@ -11,7 +11,7 @@ export default function Intro() {
       </p>
       <h2>Warning</h2>
       <p className="intro-text">
-      Please don't share outside of FFW, it's just meant as a developer reference. <a href="https://github.com/MKorostoff/backronym-generator">Source code here</a>. I tried to eliminate all the offensive words from the wordlist, but if I missed any, let me know on slack and I'll remove them (and do me a favor by not voting for them on the leaderboard if you find one).
+      Please only vote for nice backronyms that say good things about FFW. If people start voting for mean ones, I'll have to take the site down, but we're all professionals here, so I hope that won't be necessary. Please don't share outside of FFW, it's just meant as a developer reference. <a href="https://github.com/MKorostoff/backronym-generator">Source code here</a>. I tried to eliminate all the offensive words from the wordlist, but if I missed any, let me know on slack and I'll remove them (and do me a favor by not voting for them on the leaderboard if you find one).
       </p>
     </div>
   )
