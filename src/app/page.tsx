@@ -4,6 +4,7 @@ import f_words from '../data/f.json';
 import w_words from '../data/w.json';
 import SubmitToLeaderBoard from './components/submit-to-leaderboard';
 import LeaderBoard from './components/leaderboard';
+import Intro from './components/intro';
 const secret = process.env.SECRET;
 
 //New filebased metadata API: https://nextjs.org/docs/app/api-reference/file-conventions/metadata
@@ -25,23 +26,8 @@ const Home: NextPage = (props) => {
 
   return (
     <div className="outer">
+      <Intro/>
       <div className="container">
-      <h1>The FFW Backronym Generator</h1>
-      <div>
-        The letters "FFW" can stand for many things: friends from work, fantastic futuristic websites, or even funny floppy walrus. This generator will help you find the perfect backronym for your needs. Once you find a backronym you like, you can submit it to the leaderboard for others to vote on, thus leading us to discover the best backronym for FFW.
-      </div>
-
-      <h2>Why does this website exist?</h2>
-      <div>
-
-      </div>
-
-      <h2>
-
-      </h2>
-      <div>
-
-      </div>
         <div className='word'>
           <span className="dropcap dropcap-f1">F</span>
           <span className='word-chopped'>{f_word1.slice(1)}</span>
