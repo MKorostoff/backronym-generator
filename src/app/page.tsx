@@ -1,7 +1,12 @@
+import { NextPage } from 'next';
+import hash from 'object-hash';
 import f_words from '../data/f.json';
 import w_words from '../data/w.json';
+import SubmitForm from './components/submit-form';
+const secret = process.env.SECRET;
 
-export default function Home() {
+const Home: NextPage = (props) => {
+
   //Get a randow w_word
   const w_word = w_words[Math.floor(Math.random() * w_words.length)];
 
@@ -9,10 +14,9 @@ export default function Home() {
   const f_word1 = f_words[Math.floor(Math.random() * f_words.length)];
   const f_word2 = f_words[Math.floor(Math.random() * f_words.length)];
 
-  //Chop off the first letter of each word
-  const f_word1_chopped = f_word1.slice(1);
-  const f_word2_chopped = f_word2.slice(1);
-  const w_word_chopped = w_word.slice(1);
+  //Generate a hash on the server so malicious users can't submit random values
+  const confirmation_hash = hash([f_word1, f_word2, w_word, secret]);
+
 
 
   return (
@@ -20,18 +24,32 @@ export default function Home() {
     <div className="container">
       <div className='word'>
         <span className="dropcap">F</span>
-        <span className='word-chopped'>{f_word1_chopped}</span>
+        <span className='word-chopped'>{f_word1.slice(1)}</span>
       </div>
 
       <div className='word'>
         <span className="dropcap">F</span>
-        <span className='word-chopped'>{f_word2_chopped}</span>
+        <span className='word-chopped'>{f_word2.slice(1)}</span>
       </div>
 
       <div className='word'>
         <span className="dropcap dropcap-large">W</span>
-        <span className='word-chopped'>{w_word_chopped}</span>
+        <span className='word-chopped'>{w_word.slice(1)}</span>
       </div>
+
+      <SubmitForm
+        f_word1={f_word1}
+        f_word2={f_word2}
+        w_word={w_word}
+        confirmation_hash={confirmation_hash}
+      />
+
     </div>
   )
 }
+
+Home.getInitialProps = async ({res}) => {
+  res && res.setHeader('Cache-Control', 'no-store');
+};
+
+export default Home;
