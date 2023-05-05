@@ -1,95 +1,37 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import f_words from '../data/f.json';
+import w_words from '../data/w.json';
 
 export default function Home() {
+  //Get a randow w_word
+  const w_word = w_words[Math.floor(Math.random() * w_words.length)];
+
+  //Get two random f_words
+  const f_word1 = f_words[Math.floor(Math.random() * f_words.length)];
+  const f_word2 = f_words[Math.floor(Math.random() * f_words.length)];
+
+  //Chop off the first letter of each word
+  const f_word1_chopped = f_word1.slice(1);
+  const f_word2_chopped = f_word2.slice(1);
+  const w_word_chopped = w_word.slice(1);
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    //Display the words, with the first letter gigantic
+    <div className="container">
+      <div className='word'>
+        <span className="dropcap">F</span>
+        <span className='word-chopped'>{f_word1_chopped}</span>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='word'>
+        <span className="dropcap">F</span>
+        <span className='word-chopped'>{f_word2_chopped}</span>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className='word'>
+        <span className="dropcap dropcap-large">W</span>
+        <span className='word-chopped'>{w_word_chopped}</span>
       </div>
-    </main>
+    </div>
   )
 }
