@@ -19,6 +19,10 @@ h2 {
   color: #00cadc;
 }
 
+a, a:visited {
+  color: #00d1ff;
+}
+
 .intro {
   max-width: 800px;
   margin: auto;
