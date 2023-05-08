@@ -20,7 +20,7 @@ export async function submitForVoting(formData: FormData) {
   else {
     //Insert the data into the database
     const backronym = `${f_word1} ${f_word2} ${w_word}`;
-    const { rows } = await sql`INSERT INTO backronyms VALUES (${backronym}, 1)`
+    const { rows } = await sql`INSERT INTO backronyms VALUES (${backronym}, 0)`
     console.log(rows);
   }
 }
