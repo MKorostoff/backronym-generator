@@ -1,0 +1,3 @@
+- Convert submit-to-leaderboard into server component?
+- Co-locate submit-to-leaderboard form and handler in the same file?
+- Implement loading animation during form submit

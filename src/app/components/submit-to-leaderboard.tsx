@@ -17,6 +17,7 @@ export default function SubmitToLeaderBoard(props: {
       <input type="hidden" name="f_word2" value={props.f_word2} />
       <input type="hidden" name="w_word" value={props.w_word} />
       <div className='buttons'>
+        {/* @todo, router.refresh is the only thing making this a client component, is there a way to do this in a server action maybe? */}
         <button type="reset" onClick={() => router.refresh()}>Give Me Another!</button>
         <div className='or'>OR</div>
         <button type="submit">Submit to Leaderboard</button>
