@@ -56,8 +56,8 @@ const Home: NextPage = (props) => {
       <div className='footer'>
         <div className='leaderboard'>
           <h2>Leader Board</h2>
-          {/* @ts-expect-error Server Component */}
-          <LeaderBoard/>
+            {/* @ts-expect-error Server Component */}
+            <LeaderBoard/>
         </div>
       </div>
     </div>
